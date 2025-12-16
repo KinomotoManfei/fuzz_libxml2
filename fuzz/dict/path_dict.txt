@@ -1,0 +1,7 @@
+path_current="./"
+path_parent="../"
+path_tmp="/tmp/"
+path_etc="/etc/"
+path_home="~/home/"
+long_path="../"*20
+null_byte="\x00"
