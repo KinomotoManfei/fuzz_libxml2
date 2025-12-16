@@ -1,101 +1,28 @@
-# Copyright 2016 Google Inc.
-# (保留原有协议声明)
-################################################################################
-# 基础属性扩展
-attr_xmlns_xsi=" xmlns:xsi=\"1\""
-attr_xsi_schemaLocation=" xsi:schemaLocation=\"1\""
-attr_xsi_noNamespaceSchemaLocation=" xsi:noNamespaceSchemaLocation=\"1\""
-attr_id=" id=\"1\""
-attr_class=" class=\"1\""
-attr_style=" style=\"1\""
-attr_type=" type=\"1\""
-attr_value_whitespace=" a=\"  1  \""
-attr_value_special_chars=" a=\"&<>\"\"'"
-attr_value_long=" a=\"$(printf 'a%.0s' {1..1000})\""  # 超长属性值
-attr_duplicate=" a=\"1\" a=\"2\""  # 重复属性（libxml2 容错场景）
+xmlns:xsi=" xmlns:xsi='1'"
+xsi:schemaLocation=" xsi:schemaLocation='1'"
+id=" id='1'"
+attr_whitespace=" a='  1  '"
+attr_special_chars=" a='&<>\"'"
+attr_long=" a='aaaaaaaaaaaaaaaaaaaaaaaaaaaaa'"
+attr_duplicate=" a='1' a='2'"
 
-# 实体扩展（libxml2 实体解析高危点）
-entity_external_sys="<!ENTITY a SYSTEM \"file:///etc/passwd\">"
-entity_external_pub="<!ENTITY a PUBLIC \"-//a//\" \"http://a.com/a.dtd\">"
-entity_param="%a;"
-entity_param_decl="<!ENTITY % a \"1\">"
-entity_recursive="<!ENTITY a \"&b;\"><!ENTITY b \"&a;\">"  # 递归实体（ Billion Laughs 基础）
-entity_billion_laughs="<!ENTITY a \"&b;&b;&b;&b;&b;\"><!ENTITY b \"&c;&c;&c;&c;&c;\"><!ENTITY c \"1234567890\">"
-entity_utf16="&#xfeff;"  # BOM 字符
-entity_control_char="&#x00;"  # 空字符实体
-entity_large_decimal="&#1000000;"  # 超大十进制实体
-entity_invalid_hex="&#xg;"  # 非法十六进制实体
+entity_external_sys="<!ENTITY a SYSTEM 'file:///etc/passwd'>"
+entity_recursive="<!ENTITY a '&b;'><!ENTITY b '&a;'>"
+entity_utf16="&#xfeff;"
+entity_control_char="&#x00;"
 
-# DTD/模式相关扩展（libxml2 验证模块核心）
-string_abstract="ABSTRACT"
-string_final="FINAL"
-string_fractionDigits="fractionDigits"
-string_length="length"
-string_maxExclusive="maxExclusive"
-string_maxInclusive="maxInclusive"
-string_maxLength="maxLength"
-string_minExclusive="minExclusive"
-string_minInclusive="minInclusive"
-string_minLength="minLength"
-string_pattern="pattern"
-string_totalDigits="totalDigits"
-string_whiteSpace="whiteSpace"
-string_enumeration="enumeration"
-string_nillable="nillable"
-string_block="block"
-string_extension="extension"
-string_restriction="restriction"
-string_sequence="sequence"
-string_choice="choice"
-string_group="group"
-string_attributeGroup="attributeGroup"
+ABSTRACT="ABSTRACT"
+FINAL="FINAL"
+fractionDigits="fractionDigits"
+length="length"
+maxLength="maxLength"
+minLength="minLength"
+pattern="pattern"
 
-# 标签语法扩展（覆盖嵌套/异常场景）
-tag_open_deep_nest="<a><b><c><d><e><f><g>"  # 深层嵌套标签
-tag_close_deep_nest="</g></f></e></d></c></b></a>"
-tag_self_closing_nested="<a><b/></a>"
-tag_unclosed="<a><b>"  # 未闭合标签（libxml2 容错解析）
-tag_mismatched_close="<a></b>"  # 不匹配闭合标签
-tag_xml_decl_full="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-tag_processing_instruction="<?php echo '1';?>"
-tag_comment_long="<!-- $(printf 'a%.0s' {1..1000}) -->"  # 超长注释
-tag_comment_nested="<!-- <!-- a --> -->"  # 嵌套注释（非法但 libxml2 会处理）
-tag_doctype_full="<!DOCTYPE root [<!ELEMENT root ANY>]>"
-tag_doctype_external="<!DOCTYPE root SYSTEM \"http://a.com/dtd.dtd\">"
+tag_deep_nest="<a><b><c><d><e><f><g>"
+tag_unclosed="<a><b>"
+xml_decl="<?xml version='1.0' encoding='UTF-8'?>"
 
-# 编码相关（libxml2 编码转换高危点）
-string_iso88591="ISO-8859-1"
-string_gbk="GBK"
-string_gb2312="GB2312"
-string_big5="BIG5"
-string_utf16le="UTF-16LE"
-string_utf16be="UTF-16BE"
-string_encoding_invalid="INVALID-ENCODING"  # 非法编码名
-
-# 特殊字符/边界场景
-string_null_byte="\x00"  # 空字节
-string_newline="\n"
-string_carriage_return="\r"
-string_tab="\t"
-string_vertical_tab="\v"
-string_form_feed="\f"
-string_del="\x7f"  # DEL 字符
-string_non_ascii="\xe4\xb8\xad\xe6\x96\x87"  # 中文字符（UTF-8）
-string_surrogate_pair="\xed\xa0\x80\xed\xb0\x80"  # 非法 UTF-16 代理对
-string_all_whitespace=" \t\n\r\v\f"
-string_empty_doc=""  # 空文档
-string_single_char="<"  # 仅单个标签开始符
-
-# XPath/XPointer 相关（libxml2 查询模块）
-string_xpath_expr="/root/node[@id='1']"
-string_xpath_contains="contains(text(), 'a')"
-string_xpath_predicate="[position()=1]"
-string_xpointer="xpointer(id('1'))"
-string_xinclude="<xi:include href=\"a.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"/>"
-
-# 错误恢复场景（libxml2 XML_PARSE_RECOVER 模式）
-tag_broken_entity="&a"  # 未闭合实体引用
-tag_invalid_char_ref="&#"  # 不完整字符引用
-tag_attr_unquoted=" a=1"  # 未加引号的属性值
-tag_attr_mismatched_quotes=" a='1\""  # 引号不匹配
-tag_xml_decl_invalid="<?xml version=1.0?>"  # 版本号未加引号
+broken_entity="&a"
+invalid_char_ref="&#"
+attr_unquoted=" a=1"
