@@ -1,0 +1,559 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      The system is: Linux - 6.6.87.2-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:11 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-biM2cK"
+      binary: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-biM2cK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-biM2cK'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7ec4c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7ec4c.dir/build.make CMakeFiles/cmTC_7ec4c.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-biM2cK'
+        gmake[1]: Warning: File 'CMakeFiles/cmTC_7ec4c.dir/progress.make' has modification time 0.024 s in the future
+        Building C object CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7ec4c.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7ec4c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccv4woX9.s
+        GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 38987c28e967c64056a6454abdef726e
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7ec4c.dir/'
+         as -v --64 -o CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o /tmp/ccv4woX9.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_7ec4c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ec4c.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o -o cmTC_7ec4c 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7ec4c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7ec4c.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccviV3pl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7ec4c /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7ec4c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7ec4c.'
+        gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+        gmake[1]: Leaving directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-biM2cK'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-biM2cK']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7ec4c/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_7ec4c.dir/build.make CMakeFiles/cmTC_7ec4c.dir/build]
+        ignore line: [gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-biM2cK']
+        ignore line: [gmake[1]: Warning: File 'CMakeFiles/cmTC_7ec4c.dir/progress.make' has modification time 0.024 s in the future]
+        ignore line: [Building C object CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7ec4c.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7ec4c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccv4woX9.s]
+        ignore line: [GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 38987c28e967c64056a6454abdef726e]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7ec4c.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o /tmp/ccv4woX9.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_7ec4c]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ec4c.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o -o cmTC_7ec4c ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7ec4c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7ec4c.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccviV3pl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7ec4c /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccviV3pl.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_7ec4c] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_7ec4c.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindIconv.cmake:115 (check_c_source_compiles)"
+      - "CMakeLists.txt:112 (find_package)"
+    checks:
+      - "Performing Test Iconv_IS_BUILT_IN"
+    directories:
+      source: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-I1szSW"
+      binary: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-I1szSW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "Iconv_IS_BUILT_IN"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-I1szSW'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_51fd9/fast
+        gmake: Warning: File 'Makefile' has modification time 0.025 s in the future
+        /usr/bin/gmake  -f CMakeFiles/cmTC_51fd9.dir/build.make CMakeFiles/cmTC_51fd9.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-I1szSW'
+        gmake[1]: Warning: File 'CMakeFiles/cmTC_51fd9.dir/flags.make' has modification time 0.0027 s in the future
+        Building C object CMakeFiles/cmTC_51fd9.dir/src.c.o
+        /usr/bin/cc -DIconv_IS_BUILT_IN  -std=gnu11 -o CMakeFiles/cmTC_51fd9.dir/src.c.o -c /mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-I1szSW/src.c
+        Linking C executable cmTC_51fd9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51fd9.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_51fd9.dir/src.c.o -o cmTC_51fd9 
+        gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+        gmake[1]: Leaving directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-I1szSW'
+        gmake: warning:  Clock skew detected.  Your build may be incomplete.
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:120 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-C5YHjD"
+      binary: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-C5YHjD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-C5YHjD'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d85fd/fast
+        gmake: Warning: File 'Makefile' has modification time 0.063 s in the future
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d85fd.dir/build.make CMakeFiles/cmTC_d85fd.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-C5YHjD'
+        gmake[1]: Warning: File 'CMakeFiles/cmTC_d85fd.dir/flags.make' has modification time 0.036 s in the future
+        Building C object CMakeFiles/cmTC_d85fd.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu11 -o CMakeFiles/cmTC_d85fd.dir/src.c.o -c /mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-C5YHjD/src.c
+        Linking C executable cmTC_d85fd
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d85fd.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_d85fd.dir/src.c.o -o cmTC_d85fd 
+        gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+        gmake[1]: Leaving directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-C5YHjD'
+        gmake: warning:  Clock skew detected.  Your build may be incomplete.
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:129 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_FUNC_ATTRIBUTE_DESTRUCTOR"
+    directories:
+      source: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-liD0Jn"
+      binary: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-liD0Jn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_FUNC_ATTRIBUTE_DESTRUCTOR"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-liD0Jn'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_604b4/fast
+        gmake: Warning: File 'Makefile' has modification time 0.12 s in the future
+        /usr/bin/gmake  -f CMakeFiles/cmTC_604b4.dir/build.make CMakeFiles/cmTC_604b4.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-liD0Jn'
+        gmake[1]: Warning: File 'CMakeFiles/cmTC_604b4.dir/flags.make' has modification time 0.097 s in the future
+        Building C object CMakeFiles/cmTC_604b4.dir/src.c.o
+        /usr/bin/cc -DHAVE_FUNC_ATTRIBUTE_DESTRUCTOR  -std=gnu11 -o CMakeFiles/cmTC_604b4.dir/src.c.o -c /mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-liD0Jn/src.c
+        Linking C executable cmTC_604b4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_604b4.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_604b4.dir/src.c.o -o cmTC_604b4 
+        gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+        gmake[1]: Leaving directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-liD0Jn'
+        gmake: warning:  Clock skew detected.  Your build may be incomplete.
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:134 (check_symbol_exists)"
+    checks:
+      - "Looking for getentropy"
+    directories:
+      source: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-OFzpqx"
+      binary: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-OFzpqx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_DECL_GETENTROPY"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-OFzpqx'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9bb51/fast
+        gmake: Warning: File 'Makefile' has modification time 0.13 s in the future
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9bb51.dir/build.make CMakeFiles/cmTC_9bb51.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-OFzpqx'
+        gmake[1]: Warning: File 'CMakeFiles/cmTC_9bb51.dir/flags.make' has modification time 0.093 s in the future
+        Building C object CMakeFiles/cmTC_9bb51.dir/CheckSymbolExists.c.o
+        /usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_9bb51.dir/CheckSymbolExists.c.o -c /mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-OFzpqx/CheckSymbolExists.c
+        Linking C executable cmTC_9bb51
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bb51.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_9bb51.dir/CheckSymbolExists.c.o -o cmTC_9bb51 
+        gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+        gmake[1]: Leaving directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-OFzpqx'
+        gmake: warning:  Clock skew detected.  Your build may be incomplete.
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:135 (check_symbol_exists)"
+    checks:
+      - "Looking for glob"
+    directories:
+      source: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-3Pw5tv"
+      binary: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-3Pw5tv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_DECL_GLOB"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-3Pw5tv'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1df0c/fast
+        gmake: Warning: File 'Makefile' has modification time 0.15 s in the future
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1df0c.dir/build.make CMakeFiles/cmTC_1df0c.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-3Pw5tv'
+        gmake[1]: Warning: File 'CMakeFiles/cmTC_1df0c.dir/flags.make' has modification time 0.12 s in the future
+        Building C object CMakeFiles/cmTC_1df0c.dir/CheckSymbolExists.c.o
+        /usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_1df0c.dir/CheckSymbolExists.c.o -c /mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-3Pw5tv/CheckSymbolExists.c
+        Linking C executable cmTC_1df0c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1df0c.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_1df0c.dir/CheckSymbolExists.c.o -o cmTC_1df0c 
+        gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+        gmake[1]: Leaving directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-3Pw5tv'
+        gmake: warning:  Clock skew detected.  Your build may be incomplete.
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:136 (check_symbol_exists)"
+    checks:
+      - "Looking for mmap"
+    directories:
+      source: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-A7QwYh"
+      binary: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-A7QwYh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_DECL_MMAP"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-A7QwYh'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ae64a/fast
+        gmake: Warning: File 'Makefile' has modification time 0.18 s in the future
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ae64a.dir/build.make CMakeFiles/cmTC_ae64a.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-A7QwYh'
+        gmake[1]: Warning: File 'CMakeFiles/cmTC_ae64a.dir/flags.make' has modification time 0.15 s in the future
+        Building C object CMakeFiles/cmTC_ae64a.dir/CheckSymbolExists.c.o
+        /usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_ae64a.dir/CheckSymbolExists.c.o -c /mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-A7QwYh/CheckSymbolExists.c
+        Linking C executable cmTC_ae64a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae64a.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_ae64a.dir/CheckSymbolExists.c.o -o cmTC_ae64a 
+        gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+        gmake[1]: Leaving directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-A7QwYh'
+        gmake: warning:  Clock skew detected.  Your build may be incomplete.
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:137 (check_include_files)"
+    checks:
+      - "Looking for include file stdint.h"
+    directories:
+      source: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-TNz8DX"
+      binary: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-TNz8DX"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-TNz8DX'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_85701/fast
+        gmake: Warning: File 'Makefile' has modification time 0.2 s in the future
+        /usr/bin/gmake  -f CMakeFiles/cmTC_85701.dir/build.make CMakeFiles/cmTC_85701.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-TNz8DX'
+        gmake[1]: Warning: File 'CMakeFiles/cmTC_85701.dir/flags.make' has modification time 0.17 s in the future
+        Building C object CMakeFiles/cmTC_85701.dir/HAVE_STDINT_H.c.o
+        /usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_85701.dir/HAVE_STDINT_H.c.o -c /mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-TNz8DX/HAVE_STDINT_H.c
+        Linking C executable cmTC_85701
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85701.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_85701.dir/HAVE_STDINT_H.c.o -o cmTC_85701 
+        gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+        gmake[1]: Leaving directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-TNz8DX'
+        gmake: warning:  Clock skew detected.  Your build may be incomplete.
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:321 (check_symbol_exists)"
+    checks:
+      - "Looking for dlopen"
+    directories:
+      source: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-UC9Xau"
+      binary: "/mnt/c/Users/\u6842\u5bb8\u5065/Desktop/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/\u300a\u8f6f\u4ef6\u6d4b\u8bd5\u5b9e\u9a8c\u300b\u5927\u4f5c\u4e1a/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-UC9Xau"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_DLOPEN"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-UC9Xau'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b6e03/fast
+        gmake: Warning: File 'Makefile' has modification time 0.22 s in the future
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b6e03.dir/build.make CMakeFiles/cmTC_b6e03.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-UC9Xau'
+        gmake[1]: Warning: File 'CMakeFiles/cmTC_b6e03.dir/flags.make' has modification time 0.2 s in the future
+        Building C object CMakeFiles/cmTC_b6e03.dir/CheckSymbolExists.c.o
+        /usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_b6e03.dir/CheckSymbolExists.c.o -c /mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-UC9Xau/CheckSymbolExists.c
+        Linking C executable cmTC_b6e03
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6e03.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_b6e03.dir/CheckSymbolExists.c.o -o cmTC_b6e03  -ldl 
+        gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+        gmake[1]: Leaving directory '/mnt/c/Users/桂宸健/Desktop/《软件测试实验》大作业/《软件测试实验》大作业/fuzz-libxml2/fuzz-libxml2/build/CMakeFiles/CMakeScratch/TryCompile-UC9Xau'
+        gmake: warning:  Clock skew detected.  Your build may be incomplete.
+        
+      exitCode: 0
+...
